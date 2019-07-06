@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点赞</title>
+ <script src="./jquery-3.3.1.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            transition: all 0.3s;
+        }
+        .a1{
+            width: 500px;
+            height: 150px;
+            background-color: red;
+            position: relative;
+            left: 50%;
+            margin-left: -200px;
+            top: 30px;
+        }
+        .p1{
+            font-family: 微软雅黑;
+            font-size: 20px;
+            position: absolute;
+            left: 50%;
+            margin-left: -200px;
+            top: 20px;
+        }
+        .p2{
+            font-family: 微软雅黑;
+            font-size: 20px;
+            position: absolute;
+            left: 50%;
+            margin-left: -170px;
+            top: 50px;
+        }
+        .c1{
+            padding:5px;
+            color: #428bca;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 700;
+            font-size:95%;
+            background: gold;
+            border: ridge gold;
+            border-radius: 13em/3em;
+            width: 50px;
+            height: 15px;
+            position: absolute;
+            left: 50%;
+            margin-left: 40px;
+            top: 110px;
+        }
+        .c2{
+            padding:5px;
+            color: #428bca;
+            text-align: center;
+            vertical-align: middle;
+            font-weight: 700;
+            font-size:95%;
+            background: gold;
+            border: ridge gold;
+            border-radius: 13em/3em;
+            width: 50px;
+            height: 15px;
+            position: absolute;
+            left: 50%;
+            margin-left: 110px;
+            top: 110px;
+        }
+        .c1 #dz{
+            text-decoration: none;
+
+        }
+        .c2 a{
+            text-decoration: none;
+        }
+        .c2 #comment{
+            background-color: blue;
+            width: 500px;
+            /*height: 150px;*/
+            position: relative;
+            left: 50%;
+            margin-left: -392px;
+            display: none;
+            margin-top: 10px;
+        }
+        .c1 .comment1{
+            background-color:blue;
+            width: 500px;
+            /*height: 150px;*/
+            position: relative;
+            left: 50%;
+            margin-left: -322px;
+            margin-top: 10px;
+            display: none;
+        }
+        #comment .d1{
+            position:absolute;
+            left: 50%;
+            margin-left: -40px;
+            /*bottom: 15px;*/
+
+        }
+    </style>
+</head>
+<body>
+<div class="a1" id="a1">
+    <div class="b1">
+        <p class="p1">标题：</p>
+        <!--<p class="p2">内容：</p>-->
+        <div class="c1" >
+            <a href="#" id="dz">点赞
+             <div class="comment1" id="comment1">
+                 dqwfqwfqfqf
+                 fqwfqwvwq
+                 fqwfqf
+                 fqwfqwf
+                 wfwq
+                 fq
+                 wfq
+                 fq
+                 fqfqfe
+                 qwf
+                 q
+                 fq
+                 2r
+                 qg2e
+            </div></a>
+        </div>
+        <div class="c2">
+            <a href="#" onclick="comment()">评论</a>
+            <div id="comment" >
+                付琪琪白费力气你废了发课件暗箭难防滥发李宁枫罚款缴纳了南方来啦发生发送方请各位发送方围观
+                <form action="" class="d1">
+                    <table>
+                        <tr>
+                            <td><input type="text" placeholder="快来评论吧" style="width: 220px;height: 30px"></td>
+                            <td><input type="submit" value="发表" style="width: 50px;height: 32px"></td>
+                        </tr>
+                    </table>
+
+                </form>
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+    <script>
+        // var pl=document.getElementById('pl')
+        // var comment=document.getElementById('comment')
+        var dz=document.getElementById('dz')
+        var comment1=document.getElementById('comment1')
+
+        console.log(comment1)
+        dz.onmouseover=function(){
+            comment1.style.display='block'
+        }
+        dz.onmouseout=function(){
+            comment1.style.display='none'
+        }
+
+        //  pl.onmouseover=function(){
+        //     comment.style.display='block'
+        // }
+        // pl.onmouseout=function(){
+        //     comment.style.display='none'
+        // }
+        function comment(){
+        $id = document.getElementById("comment");
+        if($id.style.display == 'none'){
+            $id.style.display = 'block';
+            }
+        else{
+            $id.style.display = 'none';
+            }
+    }
+
+    </script>
+</body>
+</html>

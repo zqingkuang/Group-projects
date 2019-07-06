@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录</title>
+</head>
+<body>
+<div style="width: 1350px;height: 500px;position: relative;">
+    <div style="width: 140px;height: 70px;top:0;left:470px;position:absolute;background-color: white"><img src="{% static 'phone/logo.jpg' %}" alt=""></div>
+    <div style="width: 600px;height: 350px;background-color:papayawhip;left:360px;top:200px;position:absolute;border-radius: 50px;">
+        <form action="{% url 'login' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        <p style="left:170px;top:60px;position: absolute">用户名：<input type="text" name="username"></p>
+        <p style="left:185px;top:130px;position: absolute">密码：<input type="password" name="password"></p>
+        <p style="top:170px;left:185px;position:absolute">请输入验证码：<input type="text" name="vcode"><img src="/verify_code/" alt="验证码有误">
+        <p style="left:175px;top:220px;position: absolute">请选择：<input type="submit" value="立即登陆">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input type="reset"><a
+                href="{% url 'register' %}">立即注册</a></p>
+        </form>
+    </div>
+</div>
+</body>
+</html>

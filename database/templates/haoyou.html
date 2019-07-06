@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}
+关注人文章
+{% endblock %}
+
+{% block dody %}
+{% for d in a %}
+    {% for foo in d.att_u2.articlemodel_set.all %}
+        <div style="width: 850px;height: 200px;background-color:white;position: relative;left: 50%;margin-left: -480px;border: 1px black dashed">
+          <p style="margin-left: 10px;margin-top: 15px">标题：{{ foo.title }}</p>
+          <p style="margin-left: 40px;margin-top: 10px">内容：{{ foo.content }}</p>
+            <div style="padding:5px;color: white;text-align: center;vertical-align: middle;font-weight: 700;font-size:95%;background: gold;border: ridge gold;border-radius: 13em/3em;width: 50px;height: 15px; position: absolute;left: 50%;margin-left: 140px;bottom: 5px;">
+                <a style="text-decoration: none;" href="{% url 'thumbsup' sid=foo.id %}">点赞{{ foo.thu_num }}</a>
+
+            </div>
+            <div style="padding:5px;color: white;text-align: center;vertical-align: middle;font-weight: 700;font-size:95%; background: gold;border: ridge gold;border-radius: 13em/3em;width: 50px;height: 15px;position: absolute;left: 50%;margin-left: 210px;bottom: 5px;">
+                <a style="text-decoration: none;" href="{% url 'pinglun' sid=foo.id %}">评论{{ foo.com_num }}</a>
+
+            </div>
+        </div>
+    {% endfor %}
+
+
+
+
+
+{% endfor %}
+
+
+{% endblock %}

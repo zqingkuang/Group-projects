@@ -1,0 +1,359 @@
+*{
+            margin: 0;
+            padding: 0;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+
+        #box02{
+             width:100%;
+             height:140px;
+            /*background: rgba(145, 163, 162, 0.9);*/
+            position:relative;
+
+
+
+        }
+        #box02 .logo{
+            /*background: #000;*/
+            float:left;
+            background: url("../phone/logo1.png");
+            height:61px;
+            width:143px;
+            position:absolute;
+            top:40px;
+            left:100px
+
+
+
+
+        }
+        #box02 .logo:hover{
+            transform: translateY(10px);
+            cursor: pointer;
+
+
+
+
+        }
+        #box02 .search{
+            width: 400px;
+	        height: 50px;
+            position:absolute;
+            top:61px;
+            left:444px
+
+        }
+        #box02 .search #q{
+            padding: 6px 0;
+           text-indent: 10px;
+           height: 24px;
+          line-height: 24px;
+          width: 472px;
+          border: none;
+          border: 2px solid red;
+          outline: 0;
+          background: #FFF;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+
+        }
+        #box02 .search .btn-search{
+            font-size: 18px;
+           font-weight: 700;
+           color: #FFF;
+           background-color: #FF4200;
+           cursor: pointer;
+           width: 50px;
+           height: 40px;
+          float: left;
+           margin-top: -40px;
+           margin-left: 475px;
+           border: none;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+}
+        #box02 .searchover{
+            height:100px;
+            width:200px;
+            position:absolute;
+            top:42px;
+            left:444px;
+
+
+
+        }
+        #box02 .searchover a{
+            float: left;
+	        top:30px;
+            left:444px;
+	        font-size: 15px;
+	        text-decoration: none;
+            color:orange;
+            margin-left: 15px;
+        }
+        #box02 .searchover a:hover{
+            background: #FF4200;
+             border-top-left-radius: 5px;
+             border-top-right-radius: 5px;
+
+        }
+        #box02 .searchdown{
+            float:left;
+            top:106px;
+            left:480px;
+            width: 500px;
+	        height: 50px;
+            position:absolute;
+
+
+
+        }
+        #box02 .searchdown a{
+            margin-left: 3px;
+	       font-size: 10px;
+	      text-decoration: none;
+	       color: #191D3A;
+            float: left
+
+
+        }
+        #box02 .searchdown a:hover{
+            color: #f40;
+
+        }
+        #box03{
+              width:100%;
+             height:100px;
+            background: rgba(125, 129, 163, 0);
+
+
+
+        }
+        #box03 .daohang{
+            width: 1500px;
+	       height: 60px;
+            margin-left:0;
+
+	       background: #ff6f00;
+
+
+
+        }
+        #box03 .daohang .zhuti{
+            margin-left: 58px;
+	       width: 100px;
+	       height: 30px;
+
+	      background: #ff6f00;
+
+
+        }
+         #box03 .daohang .zhuti a{
+            font-size: 20px;
+             margin-top:20px;
+	        color: white;
+	       text-decoration: none;
+             text-align:center;
+             /*float:left*/
+}
+
+
+
+        #box03 .daohang .qita{
+            margin-top: -14px;
+	       margin-left: 380px;
+	       width: 900px;
+	       height: 30px;
+
+
+        }
+        #box03 .daohang .qita a{
+            margin-top: 7px;
+	       width: 80px;
+	       float: left;
+	       color: white;
+	       text-decoration: none;
+
+
+        }
+		#box03 .daohang .qita a:hover{
+			transform: translateX(10px);
+
+
+		}
+		/*图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播图片轮播*/
+         #wrapper{
+            width: 894px;
+            height: 300px;
+            position:relative;
+            overflow: hidden;
+			top:0;
+			left:0;
+             background-color: #00FFFF;
+        }
+        .slide_img{
+            width: 894px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .slide_img li{
+            width: 894px;
+            height: 300px;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        .left{
+            width: 15px;
+            height: 23px;
+            background: url("../phone/icons.png") 0 -451px;
+            position: absolute;
+            left: 30px;
+            top: 147px;
+        }
+        .right{
+            width: 15px;
+            height: 23px;
+            background: url("../phone/icons.png") 0 -500px;
+            position: absolute;
+            right: 30px;
+            top: 147px;
+        }
+        .points{
+            width: 167px;
+            height: 30px;
+            list-style: none;
+            position:absolute;
+            bottom:2px;
+            left:277px;
+        }
+        .points li{
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: #ffcc33;
+            border-radius: 10px;
+            transition: all 0.3s;
+            margin: 0 4px;
+        }
+        .points li:hover{
+            cursor: pointer;
+            box-shadow: 3px 3px 10px 0px black;
+        }
+        .points .active{
+            background-color: black;
+			cursor: pointer;
+        }
+
+
+#login{
+    width:375px;
+    height:300px;
+    margin-top:-520px;
+    margin-left:892px;
+    background-color: #ffffff;
+    position:relative;
+
+
+}
+#login .form a{
+    color: #191D3A;
+    text-decoration: none;
+}
+
+#login .form .color .color2:hover{
+    color:#ff6f00;
+
+}
+#login .form .color a{
+    font-size:12px ;
+
+
+}
+#login #name{
+          padding: 6px 0;
+           text-indent: 10px;
+           height: 10px;
+          line-height: 10px;
+          width: 217px;
+          border: none;
+          border: 2px solid red;
+          outline: 0;
+          background: #FFF;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-top-right-radius: 20px;
+
+
+}
+#login #passwd{
+          padding: 6px 0;
+           text-indent: 10px;
+           height: 10px;
+          line-height: 10px;
+          width: 217px;
+          border: none;
+          border: 2px solid red;
+          outline: 0;
+          background: #FFF;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-top-right-radius: 20px;
+
+
+}
+#login .login2{
+            font-size: 18px;
+           font-weight: 700;
+           color: #FFF;
+           background-color: #FF4200;
+           cursor: pointer;
+           width: 262px;
+           height: 40px;
+          float: left;
+           margin-top: 21px;
+           margin-left: 13px;
+           border: none;
+          border-top-right-radius: 20px;
+          border-bottom-right-radius: 20px;
+          border-top-left-radius: 20px;
+          border-bottom-left-radius: 20px;
+}
+
+#login .form{
+    margin-top:57px;
+    margin-left:50px;
+    position:absolute;
+
+}
+#login .form .color a{
+    font-size:12px ;
+
+
+}
+
+#login .register a{
+    font-size:12px ;
+
+
+}
+#login .form .rightnow{
+    font-size:12px ;
+    color:#ff6f00;
+
+
+
+}
+#login .register{
+    position: absolute;
+    margin-left:0;
+    margin-top:100px
+}
