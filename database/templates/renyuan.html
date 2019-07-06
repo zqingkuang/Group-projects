@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %}
+关注人员
+{% endblock %}
+
+{% block dody %}
+    <div style="width:650px;height: 300px;background-color: white;position: absolute;left: 50%;margin-left: -366px;border:1px black dashed;top: 200px;">
+    {% for foo in s %}
+        <p style="margin-top: 30px;margin-left:200px;">{{ foo.att_u2.name }}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'dd' sid=foo.att_u2.id %}">查看好友信息</a></p>
+    {% endfor %}
+    </div>
+
+
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% block title %}
+个人文章
+{% endblock %}
+{% block dody %}
+    <div style="width:650px;height: 300px;background-color: white;position: absolute;left: 50%;margin-left: -366px;border:1px black dashed;top: 200px;">
+    {% for foo in a %}
+        <p style="margin-top: 30px;margin-left:200px;">{{ foo.title }}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'del' sid=foo.id %}">删除</a></p>
+    {% endfor %}
+
+    </div>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+评论
+{% endblock %}
+{% block dody %}
+    <div  style="width: 650px;border:1px black solid;background-color:white;position: relative;left: 50%;margin-left: -369px">
+        <p style="margin-left: 15px;top: 15px">{{ s.user_s.name }}:</p>
+        <p style="margin-left: 49px;top: 25px">标题：{{ s.title }}</p>
+        <p style="margin-left: 69px;top: 15px">内容：{{ s.content }}</p>
+        <p style="margin-left: 400px;top: 15px">发布时间：{{ s.date|date:"Y.m.d H:i:s" }} </p>
+        <div style="width: 720px;height: 100px">
+            <p style="margin-left: 10px;top: 15px">评论：</p>
+                {% for fo in s.commentmodel_set.all %}
+                    <p style="margin-left: 10px;top: 20px">{{ fo.this_u.name }}:{{ fo.content }}&emsp;&emsp;&emsp;{{ fo.date|date:"Y年m月d日H小时i分钟s秒" }}</p>
+                {% endfor %}
+
+            </div>
+            <div style="width: 300px;height: 40px;margin-left: 200px;">
+                <form action="{% url 'repyle1' id=s.id %}" method="post" style="position:absolute;left: 50%;margin-left: -40px;">
+                        {% csrf_token %}
+                        <input type="text" name="shuru" style="width: 220px;height: 30px" placeholder="快来评论吧">
+                        <input type="submit" value="提交" style="width: 50px;height: 32px">
+                    </form>
+            </div>
+    </div>
+{% endblock %}

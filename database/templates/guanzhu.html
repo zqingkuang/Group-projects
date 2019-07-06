@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% block title %}
+关注
+{% endblock %}
+{#    <style>#}
+{#        *{#}
+{#            margin: 0;#}
+{#            padding: 0;#}
+{##}
+{#        }#}
+{##}
+{#        .guanzhu .g1 a{#}
+{#            padding:5px;#}
+{#            color: #428bca;#}
+{#            text-align: center;#}
+{#            vertical-align: middle;#}
+{#            font-weight: 700;#}
+{#            font-size:75%;#}
+{#            background: gold;#}
+{#            border: ridge gold;#}
+{#            border-radius: 13em/3em;#}
+{#            width: 40px;#}
+{#            height: 15px;#}
+{#            text-decoration: none;#}
+{#            position: absolute;#}
+{#            top: 13px;#}
+{#            right: 50%;#}
+{#            margin-right: -100px;#}
+{#        }#}
+{##}
+{#        .guanzhu .g2 a{#}
+{#            padding:5px;#}
+{#            color: #428bca;#}
+{#            text-align: center;#}
+{#            vertical-align: middle;#}
+{#            font-weight: 700;#}
+{#            font-size:75%;#}
+{#            background: gold;#}
+{#            border: ridge gold;#}
+{#            border-radius: 13em/3em;#}
+{#            width: 50px;#}
+{#            height: 15px;#}
+{#            text-decoration: none;#}
+{#            position: absolute;#}
+{#            top: 13px;#}
+{#            right: 50%;#}
+{#            margin-right: -110px;#}
+{#            display: none;#}
+{#        }#}
+{##}
+{#    </style>#}
+
+{% block dody %}
+<div>
+    <div class="guanzhu" style="width: 700px;background-color: white;position: absolute;left: 50%;margin-left: -404px;border:1px black dashed;top: 200px;">
+            {% for foo in d %}
+
+                    <p style="margin-left: 250px;margin-top: 20px;">{{ foo.name }}:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="{% url 'guanzhu' sid=foo.id %}" >关注</a></p>
+
+            {% endfor %}
+
+    </div>
+{% endblock %}
+
