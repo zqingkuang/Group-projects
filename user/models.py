@@ -1,13 +1,18 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser
 from db.base_model import BaseModel
+from django.core import validators
 # Create your models here.
 
 
 class User(models.Model):
     '''用户模型类'''
-    username = models.CharField(max_length=180)
-    password = models.CharField(max_length=20)
+    username = models.CharField(max_length=180, validators=[validators.MinLengthValidator(5, '用户名长度最小为5'),
+                                                           validators.RegexValidator('^\w{5,20}$', '账户格式错误'),
+                                                           validators.MaxLengthValidator(20, '用户名长度最大为20')])
+    password = models.CharField(max_length=20,validators=[validators.RegexValidator('^[\da-zA-Z_]+$', '密码包含汉字或特殊字符'),
+                                                            validators.MaxLengthValidator(20, '密码长度多于20个字符'),
+                                                            validators.MinLengthValidator(8, '密码长度少于8个字符')])
     email = models.EmailField(blank=False)
     create_time = models.DateTimeField(auto_now_add=True, verbose_name='创建时间')
     update_time = models.DateTimeField(auto_now=True, verbose_name='更新时间')
